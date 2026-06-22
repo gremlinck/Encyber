@@ -1,0 +1,8 @@
+{
+  "name": "ENCYBER",
+  "description": "Sovereign Industrial Intelligence System with real-time SCADA intrusion detection, NERC CIP compliance tracking, and interactive Gemini-powered threat briefings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

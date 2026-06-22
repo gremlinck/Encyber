@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-lora: "Lora", serif;
+
+  --color-primary-navy: #000F3C;
+  --color-mid-gray: #B0AEA5;
+  --color-warm-off-white: #FAF9F5;
+  --color-signal-red: #DC283C;
+  --color-on-primary: #FFFFFF;
+  --color-secondary-orange: #FFB59E;
+  --color-inverse-primary: #006A61;
+  --color-border-subtle: rgba(0, 15, 60, 0.08);
+  --color-obsidian-deep: #050505;
+  --color-surface-container: #F2F1EC;
+  --color-surface-container-high: #EBE9E2;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-action-orange: #D97757;
+  --color-terminal-green: #52D7C7;
+  --color-border-flare: rgba(220, 40, 60, 0.15);
+}
+
+/* Glass Edge effect */
+.glass-edge {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Log feed mask gradient */
+.log-feed-mask {
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* Custom glowing pulse for active indicators */
+@keyframes red-pulse {
+  0%, 100% { text-shadow: 0 0 4px rgba(220, 40, 60, 0.2); opacity: 0.8; }
+  50% { text-shadow: 0 0 12px rgba(220, 40, 60, 0.8); opacity: 1; }
+}
+
+.pulse-red {
+  color: #dc283c;
+  animation: red-pulse 2s infinite;
+}
+
+@keyframes teal-pulse {
+  0%, 100% { text-shadow: 0 0 4px rgba(82, 215, 199, 0.2); opacity: 0.8; }
+  50% { text-shadow: 0 0 12px rgba(82, 215, 199, 0.8); opacity: 1; }
+}
+
+.pulse-teal {
+  color: #52D7C7;
+  animation: teal-pulse 2s infinite;
+}
+
+/* Custom Scrollbar for terminal logs */
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
