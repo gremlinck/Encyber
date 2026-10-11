@@ -1,26 +1,47 @@
-import { ArrowRight, GraduationCap, SearchCheck, Compass } from 'lucide-react'
+import { ArrowRight, GraduationCap, SearchCheck, Compass, Cpu, Zap, Droplets, Factory, Ship, HeartPulse } from 'lucide-react'
 import { Link } from '../lib/router'
 import CtaBand from '../components/CtaBand'
 
-const services = [
+const offerings = [
   {
     icon: <GraduationCap size={22} />,
-    title: 'OT security training',
-    body: 'Hands-on, scenario-based training that prepares engineers, operators and security teams for real incidents in industrial environments.',
+    title: 'Training',
+    body: 'Hands-on, scenario-based OT security training for engineers, operators and security teams.',
     to: '/services#training',
   },
   {
     icon: <SearchCheck size={22} />,
     title: 'Vulnerability assessments',
-    body: 'A clear picture of where your OT environment is exposed, with findings ranked by operational risk and a practical plan to fix them.',
+    body: 'Where your OT environment is exposed, ranked by operational risk, with a plan to fix it.',
     to: '/services#assessments',
   },
   {
     icon: <Compass size={22} />,
-    title: 'Security consulting',
-    body: 'Senior guidance on OT security strategy, standards and incident readiness, sized to the team and budget you actually have.',
+    title: 'Consulting',
+    body: 'Senior guidance on OT security strategy, standards and incident readiness.',
     to: '/services#consulting',
   },
+  {
+    icon: <Cpu size={22} />,
+    title: 'Varo AI',
+    body: 'Our product. Turns a stream of industrial alerts into one clear, prioritized action.',
+    to: '/products',
+  },
+]
+
+const reasons = [
+  { title: 'OT first', body: 'Everything we do starts from how industrial systems work, not from IT security adapted to fit.' },
+  { title: 'Built around operations', body: 'Uptime and safety come first. Our work is planned so it never gets in the way of running the plant.' },
+  { title: 'Vendor-neutral', body: 'We work with the tools and platforms you already own. No rip and replace.' },
+  { title: 'People to technology', body: 'Training, assessment, advice and product from one team, so nothing falls between suppliers.' },
+]
+
+const industries = [
+  { icon: <Zap size={24} />, name: 'Energy' },
+  { icon: <Droplets size={24} />, name: 'Water utilities' },
+  { icon: <Factory size={24} />, name: 'Manufacturing' },
+  { icon: <Ship size={24} />, name: 'Ports & transportation' },
+  { icon: <HeartPulse size={24} />, name: 'Healthcare' },
 ]
 
 export default function Home() {
@@ -31,7 +52,7 @@ export default function Home() {
           <div className="eyebrow">OT / ICS Cybersecurity</div>
           <h1>Practical security for the systems that <em>can't go down.</em></h1>
           <p className="lead">
-            ENCYBER helps critical infrastructure operators train their people, find their weak points and build an OT security program that holds up.
+            Training, vulnerability assessments, consulting and decision intelligence for the organizations that run critical infrastructure.
           </p>
           <div className="hero-actions">
             <Link to="/contact" className="btn btn-primary">Contact us <ArrowRight size={16} /></Link>
@@ -40,64 +61,70 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section-tight intro">
+        <div className="wrap wrap-narrow">
+          <h2>OT cybersecurity for critical infrastructure</h2>
+          <p>
+            Power grids, water plants, factories, ports and hospitals run on operational technology that is more connected, and more targeted, every year. ENCYBER helps the teams responsible for it get ready, find their gaps and respond with confidence.
+          </p>
+        </div>
+      </section>
+
+      <section className="section section-line">
         <div className="wrap">
           <div className="section-head">
-            <div className="eyebrow">What we do</div>
-            <h2>Three ways we work with you.</h2>
+            <div className="eyebrow">What we offer</div>
+            <h2>End-to-end OT security.</h2>
           </div>
-          <div className="grid-3">
-            {services.map(s => (
-              <Link key={s.title} to={s.to} className="card">
-                <div className="card-icon">{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.body}</p>
-                <span className="text-link">Learn more <ArrowRight size={14} /></span>
+          <div className="grid-4">
+            {offerings.map(o => (
+              <Link key={o.title} to={o.to} className="card">
+                <div className="card-icon">{o.icon}</div>
+                <h3>{o.title}</h3>
+                <p>{o.body}</p>
+                <span className="text-link">Read more <ArrowRight size={14} /></span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section section-line">
-        <div className="wrap grid-2">
-          <div>
-            <div className="eyebrow">Solutions</div>
-            <h2>Built for operators, not just security teams.</h2>
+      <section className="section section-dark">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="eyebrow">Why us</div>
+            <h2>Why ENCYBER</h2>
           </div>
-          <div>
-            <p>
-              Industrial environments run on different rules than IT. Uptime and safety come first, equipment stays in service for decades, and many teams have no dedicated OT security staff. Our work starts from how your plant actually operates.
-            </p>
-            <div className="sectors">
-              {['Energy & utilities', 'Water', 'Manufacturing', 'Ports & logistics', 'Healthcare'].map(s => (
-                <span key={s} className="sector">{s}</span>
-              ))}
-            </div>
-            <p style={{ marginTop: 24 }}>
-              <Link to="/solutions" className="text-link">See solutions <ArrowRight size={14} /></Link>
-            </p>
+          <div className="grid-4 reasons">
+            {reasons.map(r => (
+              <div key={r.title}>
+                <h3>{r.title}</h3>
+                <p>{r.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section section-line">
-        <div className="wrap product-band">
-          <div>
-            <div className="eyebrow">Our product</div>
-            <h2>Varo AI</h2>
-            <p>
-              Decision intelligence for OT security. Varo AI sits above the detection tools you already own and turns a stream of industrial alerts into one clear, prioritized action, with the reasoning attached.
-            </p>
+      <section className="section">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="eyebrow">Industries</div>
+            <h2>Industries we work with</h2>
           </div>
-          <div>
-            <Link to="/products" className="btn btn-outline">Explore Varo AI <ArrowRight size={16} /></Link>
+          <div className="tiles">
+            {industries.map(i => (
+              <Link key={i.name} to="/solutions#industries" className="tile">
+                {i.icon}
+                <span>{i.name}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       <CtaBand
-        heading="Not sure where to start?"
+        heading="Secure your operations with ENCYBER."
         body="Tell us about your environment. We'll suggest a sensible first step."
       />
     </>

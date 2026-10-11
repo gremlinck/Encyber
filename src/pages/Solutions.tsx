@@ -26,10 +26,10 @@ const challenges = [
 ]
 
 const industries = [
-  { name: 'Energy & utilities', body: 'Generation, transmission and distribution operators, including co-ops and municipal utilities.' },
-  { name: 'Water', body: 'Treatment and distribution systems run by small teams with limited security staff.' },
+  { name: 'Energy', body: 'Generation, transmission and distribution operators, including co-ops and municipal utilities.' },
+  { name: 'Water utilities', body: 'Treatment and distribution systems run by small teams with limited security staff.' },
   { name: 'Manufacturing', body: 'Production lines where downtime is measured by the minute.' },
-  { name: 'Ports & logistics', body: 'Terminals and cargo systems that connect operational and business networks.' },
+  { name: 'Ports & transportation', body: 'Terminals and cargo systems that connect operational and business networks.' },
   { name: 'Healthcare', body: 'Hospital facilities and building systems that have to stay available around the clock.' },
 ]
 
@@ -60,7 +60,7 @@ export default function Solutions() {
         </div>
       </section>
 
-      <section className="section section-line">
+      <section id="industries" className="section section-line">
         <div className="wrap">
           <div className="section-head">
             <h2>By industry</h2>

@@ -13,17 +13,27 @@ export default function Footer() {
             </Link>
             <p className="tagline">Pioneering Cybersecurity<br />for Critical Technologies</p>
           </div>
-          <nav className="footer-links" aria-label="Footer">
-            <Link to="/services">Services</Link>
-            <Link to="/solutions">Solutions</Link>
-            <Link to="/products">Products</Link>
+          <nav className="footer-col" aria-label="Offerings">
+            <h4>Offerings</h4>
+            <Link to="/services#training">Training</Link>
+            <Link to="/services#assessments">Vulnerability assessments</Link>
+            <Link to="/services#consulting">Consulting</Link>
+            <Link to="/products">Varo AI</Link>
+          </nav>
+          <nav className="footer-col" aria-label="Company">
+            <h4>Company</h4>
             <Link to="/about">About</Link>
+            <Link to="/solutions">Solutions</Link>
             <Link to="/contact">Contact us</Link>
           </nav>
+          <div className="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:demo@encyberr.com">demo@encyberr.com</a>
+            <span>Busan, Republic of Korea</span>
+          </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Encyber Co., Ltd. · Busan, Republic of Korea</span>
-          <a href="mailto:demo@encyberr.com">demo@encyberr.com</a>
+          <span>© 2026 Encyber Co., Ltd. · All rights reserved.</span>
         </div>
       </div>
     </footer>
