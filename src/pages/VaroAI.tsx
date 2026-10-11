@@ -356,7 +356,7 @@ export default function VaroAI({ onNavigate }: VaroAIProps) {
             fontFamily: 'var(--font-sans)', fontSize: 17, fontWeight: 300,
             color: '#5A7A9A', lineHeight: 1.75, marginBottom: 40,
           }}>
-            30 minutes. Your data. No commitment. Enterprise teams see results in the first session.
+            30 minutes. Your data. No commitment.
           </p>
 
           <div className="reveal" style={{

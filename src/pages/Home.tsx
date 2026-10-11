@@ -119,7 +119,7 @@ export default function Home({ onNavigate }: HomeProps) {
           justifyContent: 'center', marginBottom: 72,
           position: 'relative', zIndex: 2,
         }}>
-          {['6 enterprise customers', '·', '100% retention', '·', '2 patents pending', '·', 'Lighthouse Network 2026'].map((item, i) => (
+          {['2 patents pending', '·', 'Lighthouse Network 2026'].map((item, i) => (
             <span key={i} style={{ opacity: item === '·' ? 0.35 : 1 }}>{item}</span>
           ))}
         </div>
@@ -323,8 +323,6 @@ export default function Home({ onNavigate }: HomeProps) {
               display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16,
             }}>
               {[
-                { num: '6', label: 'Enterprise customers' },
-                { num: '100%', label: 'Customer retention' },
                 { num: '18+', label: 'Years OT/ICS expertise' },
                 { num: '2', label: 'Patents pending' },
               ].map((stat, i) => (
@@ -418,7 +416,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {
               eyebrow: 'For OT security teams',
               heading: 'Ready to see Varo AI on your alerts?',
-              body: '30 minutes. Your data. No commitment. Enterprise teams see results in the first session.',
+              body: '30 minutes. Your data. No commitment.',
               cta: 'Request a demo', page: 'contact' as Page, primary: true,
             },
             {

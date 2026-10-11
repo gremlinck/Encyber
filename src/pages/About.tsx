@@ -11,8 +11,7 @@ interface AboutProps {
 const timeline = [
   { year: '2022', event: 'Encyber Inc. founded · Busan, Republic of Korea' },
   { year: '2023', event: 'First OT/ICS patent filed' },
-  { year: '2024', event: 'First 3 enterprise customers onboarded · 100% retention maintained' },
-  { year: '2025', event: 'Varo AI v1.0 launched · Second patent filed · 3 additional enterprise customers' },
+  { year: '2025', event: 'Varo AI v1.0 launched · Second patent filed' },
   { year: '2026', event: 'Lighthouse Network 2026 — first international selectee · SelectUSA Finalist · Microsoft for Startups · Varo AI v2.0 Copilot Edition' },
 ]
 
@@ -122,8 +121,6 @@ export default function About({ onNavigate }: AboutProps) {
                 {[
                   { num: '18+', label: 'Years OT/ICS' },
                   { num: '2', label: 'Patents pending' },
-                  { num: '6', label: 'Enterprise customers' },
-                  { num: '100%', label: 'Retention rate' },
                 ].map(s => (
                   <div key={s.label} style={{
                     background: '#ffffff', border: '1px solid var(--light-gray)',
