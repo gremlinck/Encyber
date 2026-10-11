@@ -97,7 +97,7 @@ export default function AlertTerminal() {
               fontFamily: 'var(--font-mono)', fontSize: 11,
               color: 'rgba(176,174,165,0.4)', letterSpacing: '.1em',
             }}>
-              VARO AI · A.G.E.N.T. LOOP · LIVE
+              VARO AI · A.G.E.N.T. LOOP · SIMULATED DEMO
             </span>
           </div>
 
