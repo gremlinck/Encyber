@@ -23,20 +23,12 @@ export default function About() {
               ENCYBER is headquartered in Busan, Republic of Korea, and works with organizations in Korea and the United States.
             </p>
           </div>
-          <div>
-            <div className="person">
-              <h3>Christine Kim</h3>
-              <div className="role">Founder & CEO</div>
-              <p>
-                Christine has spent 19 years in OT/ICS and enterprise cybersecurity across Korea and Asia-Pacific, working with industrial operators, critical infrastructure owners and security teams. She is the author of <em>The Digital Pandemic</em>.
-              </p>
-            </div>
-            <div className="person">
-              <h3>Michele Chubirka</h3>
-              <div className="role">Advisor</div>
-              <p>Security architect and industry advisor.</p>
-            </div>
-          </div>
+          <dl className="glance">
+            <div><dt>Focus</dt><dd>OT / ICS cybersecurity for critical infrastructure</dd></div>
+            <div><dt>Services</dt><dd>Training, vulnerability assessments, consulting</dd></div>
+            <div><dt>Product</dt><dd>Varo AI</dd></div>
+            <div><dt>Headquarters</dt><dd>Busan, Republic of Korea</dd></div>
+          </dl>
         </div>
       </section>
 

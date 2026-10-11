@@ -15,9 +15,10 @@ export default function Footer() {
           </div>
           <nav className="footer-links" aria-label="Footer">
             <Link to="/services">Services</Link>
-            <Link to="/varo-ai">Varo AI</Link>
+            <Link to="/solutions">Solutions</Link>
+            <Link to="/products">Products</Link>
             <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact us</Link>
           </nav>
         </div>
         <div className="footer-bottom">

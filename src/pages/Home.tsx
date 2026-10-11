@@ -34,7 +34,7 @@ export default function Home() {
             ENCYBER helps critical infrastructure operators train their people, find their weak points and build an OT security program that holds up.
           </p>
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">Talk to us <ArrowRight size={16} /></Link>
+            <Link to="/contact" className="btn btn-primary">Contact us <ArrowRight size={16} /></Link>
             <Link to="/services" className="btn btn-ghost">See our services</Link>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
       <section className="section section-line">
         <div className="wrap grid-2">
           <div>
-            <div className="eyebrow">Who it's for</div>
+            <div className="eyebrow">Solutions</div>
             <h2>Built for operators, not just security teams.</h2>
           </div>
           <div>
@@ -74,6 +74,9 @@ export default function Home() {
                 <span key={s} className="sector">{s}</span>
               ))}
             </div>
+            <p style={{ marginTop: 24 }}>
+              <Link to="/solutions" className="text-link">See solutions <ArrowRight size={14} /></Link>
+            </p>
           </div>
         </div>
       </section>
@@ -88,7 +91,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <Link to="/varo-ai" className="btn btn-outline">Explore Varo AI <ArrowRight size={16} /></Link>
+            <Link to="/products" className="btn btn-outline">Explore Varo AI <ArrowRight size={16} /></Link>
           </div>
         </div>
       </section>

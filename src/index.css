@@ -163,11 +163,16 @@ a.card:hover { border-color: var(--red); transform: translateY(-3px); }
 
 /* ── About ── */
 .prose p { margin-bottom: 18px; font-size: 17px; line-height: 1.75; }
-.person { background: #fff; border: 1px solid var(--light-gray); border-radius: 16px; padding: 26px; }
-.person + .person { margin-top: 16px; }
-.person h3 { margin-bottom: 2px; color: var(--navy); }
-.person .role { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; color: var(--red); margin-bottom: 12px; }
-.person p { font-size: 15px; line-height: 1.65; color: var(--slate); }
+.glance { background: #fff; border: 1px solid var(--light-gray); border-radius: 16px; padding: 8px 26px; }
+.glance > div { padding: 18px 0; border-bottom: 1px solid var(--light-gray); }
+.glance > div:last-child { border-bottom: none; }
+.glance dt { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 4px; }
+.glance dd { font-size: 16px; font-weight: 400; color: var(--navy); line-height: 1.5; }
+.grid-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.industries { list-style: none; border-top: 1px solid var(--light-gray); }
+.industries li { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--light-gray); align-items: baseline; }
+.industries strong { font-weight: 700; font-size: 17px; color: var(--navy); letter-spacing: -0.01em; }
+.industries span { font-size: 15px; line-height: 1.6; color: var(--slate); }
 .facts { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .facts li { border-top: 2px solid var(--red); padding-top: 16px; }
 .facts strong { display: block; font-weight: 700; font-size: 16px; color: var(--navy); margin-bottom: 4px; }
@@ -211,10 +216,11 @@ a.card:hover { border-color: var(--red); transform: translateY(-3px); }
 @media (max-width: 860px) {
   .nav-links { display: none; }
   .nav-toggle { display: block; }
-  .grid-3, .grid-2, .service, .steps, .product-band, .contact-grid, .facts { grid-template-columns: 1fr; }
+  .grid-3, .grid-2, .grid-2x2, .service, .steps, .product-band, .contact-grid, .facts { grid-template-columns: 1fr; }
   .steps { gap: 28px; }
   .loop li { grid-template-columns: 32px 1fr; }
   .loop p { grid-column: 2; }
+  .industries li { grid-template-columns: 1fr; gap: 4px; }
 }
 @media (max-width: 520px) {
   .form-row { grid-template-columns: 1fr; gap: 0; }

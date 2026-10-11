@@ -2,7 +2,8 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Services from './pages/Services'
-import VaroAI from './pages/VaroAI'
+import Solutions from './pages/Solutions'
+import Products from './pages/Products'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import { useRoute } from './lib/router'
@@ -15,7 +16,8 @@ export default function App() {
       <main>
         {route === '/' && <Home />}
         {route === '/services' && <Services />}
-        {route === '/varo-ai' && <VaroAI />}
+        {route === '/solutions' && <Solutions />}
+        {route === '/products' && <Products />}
         {route === '/about' && <About />}
         {route === '/contact' && <Contact />}
       </main>

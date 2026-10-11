@@ -11,12 +11,12 @@ const loop = [
   { letter: 'T', name: 'Triage', desc: 'Returns one of three outcomes: act now, monitor, or routine.' },
 ]
 
-export default function VaroAI() {
+export default function Products() {
   return (
     <>
       <section className="hero">
         <div className="wrap">
-          <div className="eyebrow">Varo AI · Decision intelligence for OT/ICS</div>
+          <div className="eyebrow">Products · Varo AI</div>
           <h1>Stop triaging alerts. <em>Start making decisions.</em></h1>
           <p className="lead">
             Varo AI sits above your existing OT security stack and turns every industrial alert into one clear, prioritized action, with the reasoning attached.

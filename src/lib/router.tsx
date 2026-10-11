@@ -1,18 +1,20 @@
 import { useEffect, useState, type ReactNode, type MouseEvent } from 'react'
 
-export const routes = ['/', '/services', '/varo-ai', '/about', '/contact'] as const
+export const routes = ['/', '/services', '/solutions', '/products', '/about', '/contact'] as const
 export type Route = (typeof routes)[number]
 
 const titles: Record<Route, string> = {
   '/': 'ENCYBER — OT Security Training, Assessments & Consulting',
   '/services': 'Services — OT Security Training, Assessments & Consulting · ENCYBER',
-  '/varo-ai': 'Varo AI — Decision Intelligence for OT/ICS Security · ENCYBER',
+  '/solutions': 'Solutions — OT Security by Challenge and Industry · ENCYBER',
+  '/products': 'Products — Varo AI, Decision Intelligence for OT/ICS Security · ENCYBER',
   '/about': 'About ENCYBER',
   '/contact': 'Contact ENCYBER',
 }
 
 function normalize(pathname: string): Route {
-  const p = pathname.replace(/\/+$/, '') || '/'
+  let p = pathname.replace(/\/+$/, '') || '/'
+  if (p === '/varo-ai') p = '/products' // old address
   return (routes as readonly string[]).includes(p) ? (p as Route) : '/'
 }
 

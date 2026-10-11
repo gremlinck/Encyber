@@ -8,7 +8,7 @@ interface CtaBandProps {
   to?: string
 }
 
-export default function CtaBand({ heading, body, label = 'Talk to us', to = '/contact' }: CtaBandProps) {
+export default function CtaBand({ heading, body, label = 'Contact us', to = '/contact' }: CtaBandProps) {
   return (
     <section className="cta">
       <div className="wrap cta-inner">

@@ -5,7 +5,8 @@ import { Link, type Route } from '../lib/router'
 
 const links: { label: string; to: Route }[] = [
   { label: 'Services', to: '/services' },
-  { label: 'Varo AI', to: '/varo-ai' },
+  { label: 'Solutions', to: '/solutions' },
+  { label: 'Products', to: '/products' },
   { label: 'About', to: '/about' },
 ]
 
@@ -27,7 +28,7 @@ export default function Nav({ route }: { route: Route }) {
                 {l.label}
               </Link>
             ))}
-            <Link to="/contact" className="btn btn-primary btn-sm">Talk to us</Link>
+            <Link to="/contact" className="btn btn-primary btn-sm">Contact us</Link>
           </div>
           <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -39,7 +40,7 @@ export default function Nav({ route }: { route: Route }) {
           {links.map(l => (
             <Link key={l.to} to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>
           ))}
-          <Link to="/contact" className="btn btn-primary" onClick={() => setOpen(false)}>Talk to us</Link>
+          <Link to="/contact" className="btn btn-primary" onClick={() => setOpen(false)}>Contact us</Link>
         </div>
       )}
     </>
