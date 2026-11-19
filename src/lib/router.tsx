@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode, type MouseEvent, type CSSProperties } from 'react'
 
-export const routes = ['/', '/services', '/products', '/about', '/contact'] as const
+export const routes = ['/', '/services', '/products', '/about', '/contact', '/ko'] as const
 export type Route = (typeof routes)[number]
 
 const titles: Record<Route, string> = {
@@ -9,6 +9,7 @@ const titles: Record<Route, string> = {
   '/products': 'Products — EnguardX & Varo AI · ENCYBER',
   '/about': 'About ENCYBER',
   '/contact': 'Contact ENCYBER',
+  '/ko': '엔사이버 — 핵심 인프라 사이버보안',
 }
 
 function normalize(pathname: string): Route {

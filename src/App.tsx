@@ -6,12 +6,14 @@ import Services from './pages/Services'
 import Products from './pages/Products'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Korean from './pages/Korean'
 import { useRoute } from './lib/router'
 import { useReveal } from './lib/useReveal'
 
 export default function App() {
   const route = useRoute()
   useReveal(route)
+  if (route === '/ko') return <Korean />
   return (
     <div className="app">
       <Announcement />
