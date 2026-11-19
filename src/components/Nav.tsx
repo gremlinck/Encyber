@@ -27,7 +27,10 @@ export default function Nav({ route }: { route: Route }) {
             </Link>
           ))}
         </nav>
-        <Link to="/contact" className="btn btn-primary btn-sm nav-cta">Talk to an expert</Link>
+        <div className="nav-right">
+          <Link to="/ko" className="lang-pill" aria-label="한국어">KO</Link>
+          <Link to="/contact" className="btn btn-primary btn-sm nav-cta">Talk to an expert</Link>
+        </div>
         <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -37,6 +40,7 @@ export default function Nav({ route }: { route: Route }) {
           {links.map(l => (
             <Link key={l.label} to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>
           ))}
+          <Link to="/ko" onClick={() => setOpen(false)}>한국어</Link>
           <Link to="/contact" className="btn btn-primary" onClick={() => setOpen(false)}>Talk to an expert</Link>
         </nav>
       )}
