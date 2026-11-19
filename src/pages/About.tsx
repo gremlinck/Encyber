@@ -32,7 +32,7 @@ export default function About() {
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
           <div className="head reveal">
             <div className="eyebrow">What we do</div>
-            <h2 className="h2">Services, products and partners — <b>in one place<span className="dot">.</span></b></h2>
+            <h2 className="h2">Services, products and partners<br /><b>— in one place<span className="dot">.</span></b></h2>
           </div>
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
             {whatWeDo.map(w => (
