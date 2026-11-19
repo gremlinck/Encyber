@@ -61,7 +61,7 @@ export default function About({ focusContact = false }: { focusContact?: boolean
             <div className="info">
               <span className="k">OFFICES</span>
               <span style={{ lineHeight: 1.6 }}>Seoul, South Korea</span>
-              <span>Richmond, Virginia</span>
+              <span>Richmond, Virginia, USA</span>
             </div>
           </div>
           <div className="form reveal">

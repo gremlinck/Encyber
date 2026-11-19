@@ -24,7 +24,7 @@ export default function Footer() {
         <div style={{ maxWidth: 300 }}>
           <div className="k">OFFICE</div>
           <span style={{ lineHeight: 1.6 }}>Seoul, South Korea</span>
-          <span>Richmond, Virginia</span>
+          <span>Richmond, Virginia, USA</span>
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </div>
       </div>
