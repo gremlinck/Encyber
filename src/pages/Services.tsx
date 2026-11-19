@@ -127,7 +127,7 @@ export default function Services() {
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
           <div className="head reveal">
             <div className="eyebrow">Ways to engage</div>
-            <h2 className="h2">Start with one project. <b>Grow into a program<span className="dot">.</span></b></h2>
+            <h2 className="h2">Start with one project.<br /><b>Grow into a program<span className="dot">.</span></b></h2>
           </div>
           <div className="tiles">
             <div className="tile reveal"><span className="eyebrow" style={{ fontSize: 12 }}>Project</span><h3>Fixed-scope engagement</h3><p className="body">A penetration test, assessment or training cohort with a defined scope, timeline and report.</p></div>
