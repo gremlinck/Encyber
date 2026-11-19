@@ -1,5 +1,8 @@
 import { useState, type FormEvent } from 'react'
 import { EMAIL } from '../components/Footer'
+import { Link } from '../lib/router'
+import Orbit from '../components/Orbit'
+import ProductCards from '../components/ProductCards'
 
 export default function Products() {
   const [d, setD] = useState({ name: '', email: '', company: '', platform: '', message: '' })
@@ -17,23 +20,28 @@ export default function Products() {
     <>
       <section className="hero dark page-hero">
         <div className="gridbg" aria-hidden="true" />
-        <div className="orb" aria-hidden="true" style={{ width: 680, height: 680, right: -160, top: -220 }} />
+        <div className="orb" aria-hidden="true" style={{ width: 900, height: 900, right: -260, top: -380 }} />
+        <Orbit size={640} style={{ right: -140, top: -60 }} />
         <div className="wrap hero-inner">
-          <div className="eyebrow rise d1">Varo AI · by Encyber</div>
-          <h1 className="rise d2" style={{ fontSize: 'clamp(46px, 6.4vw, 80px)', lineHeight: 1 }}>Fewer alerts. Better decisions.</h1>
-          <p className="lead rise d3" style={{ maxWidth: 700 }}>Varo AI is an AI-powered judgment layer that sits above your existing OT detection platform. It adds plant context to every alert so your team knows what matters and what to do next.</p>
-          <div className="hero-actions rise d4">
-            <a href="#demo" className="btn btn-primary">Request a demo</a>
-            <a href="#how" className="btn btn-ghost">How it works</a>
-          </div>
+          <div className="eyebrow rise d1" style={{ display: 'flex', alignItems: 'center', gap: 12 }}><span className="pulse" />Products</div>
+          <h1 className="rise d2" style={{ fontSize: 'clamp(44px, 6.2vw, 76px)' }}>Built in the field. <b>Made to scale<span className="dot">.</span></b></h1>
+          <p className="lead rise d3" style={{ maxWidth: 720 }}>EnguardX builds the skills to defend industrial operations. Varo AI helps those teams decide faster. Together they turn what we learn in every engagement into something your team keeps.</p>
+          <div className="rise d4" style={{ width: '100%', paddingTop: 16 }}><ProductCards onPage /></div>
         </div>
       </section>
 
-      <section className="section" style={{ paddingBottom: 56 }}>
+      <section id="varo" className="section" style={{ paddingBottom: 56 }}>
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
-          <div className="head reveal" style={{ maxWidth: 760 }}>
-            <div className="eyebrow">The problem</div>
-            <h2 className="h2">Detection isn't the bottleneck anymore. Judgment is.</h2>
+          <div className="head-row">
+            <div className="head reveal" style={{ maxWidth: 760 }}>
+              <div className="eyebrow">Varo AI · Decision intelligence</div>
+              <h2 className="h2" style={{ fontSize: 'clamp(38px, 5vw, 64px)' }}>Fewer alerts. <b>Better decisions<span className="dot">.</span></b></h2>
+              <p className="lead">Varo AI is an AI-powered judgment layer that sits above your existing OT detection platform. It adds plant context to every alert so your team knows what matters and what to do next.</p>
+            </div>
+            <div className="hero-actions reveal">
+              <a href="#demo" className="btn btn-primary">Request a demo</a>
+              <a href="#how" className="btn btn-ghost">How it works</a>
+            </div>
           </div>
           <div className="pillars">
             <div className="pillar ink reveal"><h3>Alert volume</h3><p>OT monitoring surfaces more events than small teams can review.</p></div>
@@ -54,11 +62,32 @@ export default function Products() {
         </div>
       </section>
 
+      <section id="enguardx" className="section" style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #F3F7FA 0%, #E8F1F5 100%)', borderTop: '1px solid var(--glass-border)' }}>
+        <div className="gridbg" aria-hidden="true" />
+        <div className="orb" aria-hidden="true" style={{ width: 700, height: 700, right: -220, top: -260 }} />
+        <div className="wrap" style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 48 }}>
+          <div className="head-row">
+            <div className="head reveal" style={{ maxWidth: 760 }}>
+              <div className="eyebrow">EnguardX · Training platform</div>
+              <h2 className="h2" style={{ fontSize: 'clamp(38px, 5vw, 64px)' }}>Train on the real thing. <b>Respond like it<span className="dot">.</span></b></h2>
+              <p className="lead">EnguardX is Encyber's hands-on OT security training. Teams practise detecting and responding to attacks on real industrial equipment and simulated plant networks, then leave with scores, gaps and a plan.</p>
+            </div>
+            <Link to="/contact" className="btn btn-primary reveal">Request the training catalog</Link>
+          </div>
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+            <div className="card card-sm reveal"><div className="eyebrow" style={{ fontSize: 12 }}>01 · Range</div><h3>Cyber range exercises</h3><p>Live attack-and-defend scenarios on simulated plant networks.</p></div>
+            <div className="card card-sm reveal"><div className="eyebrow" style={{ fontSize: 12 }}>02 · Testbeds</div><h3>Portable OT testbeds</h3><p>PLC and HMI kits brought on site for practical labs.</p></div>
+            <div className="card card-sm reveal"><div className="eyebrow" style={{ fontSize: 12 }}>03 · Tracks</div><h3>Role-based tracks</h3><p>Operators, control engineers, SOC analysts and leadership.</p></div>
+            <div className="card card-sm reveal"><div className="eyebrow" style={{ fontSize: 12 }}>04 · Drills</div><h3>Incident response drills</h3><p>Tabletop and live drills with team scorecards.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section id="demo" className="section section-alt">
         <div className="wrap split">
           <div className="col reveal">
             <div className="eyebrow">Early access</div>
-            <h2 className="h2">Become a design partner.</h2>
+            <h2 className="h2">Become a <b>Varo AI design partner<span className="dot">.</span></b></h2>
             <p className="lead">We're working with a small group of OT security teams to shape Varo AI. Tell us about your environment and we'll set up a walkthrough.</p>
           </div>
           <div className="form reveal">

@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from '../lib/router'
 import CtaBand from '../components/CtaBand'
+import Orbit from '../components/Orbit'
+import ProductCards from '../components/ProductCards'
 
 const levels = [
   { name: 'L4 · Enterprise IT', tag: 'segmented', color: 'var(--green)', risk: false, detail: 'Corporate network is separated from operations by a managed firewall.' },
   { name: 'L3.5 · Industrial DMZ', tag: 'segmented', color: 'var(--green)', risk: false, detail: 'Data historian mirrored through the DMZ; no direct IT-to-OT paths found.' },
-  { name: 'L3 · Site operations', tag: 'remote access exposed', color: 'var(--red-soft)', risk: true, detail: 'Vendor VPN reaches operations servers without multi-factor authentication.' },
+  { name: 'L3 · Site operations', tag: 'remote access exposed', color: 'var(--red)', risk: true, detail: 'Vendor VPN reaches operations servers without multi-factor authentication.' },
   { name: 'L2 · Supervisory · HMI / SCADA', tag: 'review', color: 'var(--amber)', risk: false, detail: 'Shared operator accounts on HMI workstations make actions hard to trace.' },
-  { name: 'L1 · Controllers · PLC', tag: 'default credentials', color: 'var(--red-soft)', risk: true, detail: 'Controllers still accept factory-default credentials for programming access.' },
-  { name: 'L0 · Field devices', tag: 'passive only', color: 'var(--mono-dark)', risk: false, detail: 'Observed passively. No packets were sent to field devices.' },
+  { name: 'L1 · Controllers · PLC', tag: 'default credentials', color: 'var(--red)', risk: true, detail: 'Controllers still accept factory-default credentials for programming access.' },
+  { name: 'L0 · Field devices', tag: 'passive only', color: '#6B7280', risk: false, detail: 'Observed passively. No packets were sent to field devices.' },
 ]
 
 const services = [
@@ -72,7 +74,7 @@ function Triage() {
   const status = phase === 'idle' ? 'READY' : phase === 'running' ? 'WEIGHING CONTEXT…' : '3 DECISIONS'
   return (
     <div className="triage">
-      <div className="tbox"><span style={{ color: 'var(--mono-dark)' }}>ALERTS FROM DETECTION</span><span className="count" aria-live="polite">{count}</span></div>
+      <div className="tbox"><span style={{ color: '#6B7280' }}>ALERTS FROM DETECTION</span><span className="count" aria-live="polite">{count}</span></div>
       <div className="flowlane" aria-hidden="true"><span /><span /><span /><span /><span /></div>
       <div className="tbox tbox-red">
         <span>VARO AI · {status}</span>
@@ -80,7 +82,7 @@ function Triage() {
       </div>
       {phase === 'done' && (
         <div className="decisions">
-          <div className="decision rise d1"><span>Isolate vendor VPN session</span><span style={{ color: 'var(--red-soft)' }}>ACT NOW</span></div>
+          <div className="decision rise d1"><span>Isolate vendor VPN session</span><span style={{ color: 'var(--red)' }}>ACT NOW</span></div>
           <div className="decision rise d2"><span>Verify PLC logic change on Line 2</span><span style={{ color: 'var(--amber)' }}>TODAY</span></div>
           <div className="decision rise d3"><span>Schedule HMI patch window</span><span style={{ color: 'var(--green)' }}>THIS WEEK</span></div>
         </div>
@@ -95,14 +97,15 @@ export default function Home() {
     <>
       <section className="hero dark">
         <div className="gridbg" aria-hidden="true" />
-        <div className="orb" aria-hidden="true" style={{ width: 720, height: 720, right: -160, top: -200 }} />
+        <div className="orb" aria-hidden="true" style={{ width: 900, height: 900, right: -260, top: -380 }} />
+        <Orbit size={760} style={{ right: -180, top: 40 }} />
         <div className="wrap hero-inner">
           <div className="hero-copy">
             <div className="eyebrow rise d1"><span className="pulse" />OT / ICS SECURITY SERVICES</div>
             <h1>
               <span className="rise d2">Secure the systems</span>{' '}
               <span className="rise d3">that keep operations</span>{' '}
-              <span className="rise d4 accent">running.</span>
+              <span className="rise d4 accent">running<span className="dot">.</span></span>
             </h1>
             <p className="lead rise d5" style={{ maxWidth: 560 }}>
               Training, assessments and consulting for ports, utilities, manufacturers and critical infrastructure — delivered by people who know the plant floor, not just the network.
@@ -132,7 +135,7 @@ export default function Home() {
           <div className="head-row reveal">
             <div className="head">
               <div className="eyebrow">Services</div>
-              <h2 className="h2">Four ways we harden your operations.</h2>
+              <h2 className="h2">Four ways we harden <b>your operations<span className="dot">.</span></b></h2>
             </div>
             <Link to="/services" className="text-link">All services →</Link>
           </div>
@@ -168,13 +171,13 @@ export default function Home() {
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 52 }}>
           <div className="head reveal">
             <div className="eyebrow">Solutions</div>
-            <h2 className="h2">Security shaped around your industry.</h2>
+            <h2 className="h2">Security shaped around <b>your industry<span className="dot">.</span></b></h2>
           </div>
           <div className="tiles">
             <div className="tile tile-feature reveal">
               <div className="gridbg" aria-hidden="true" style={{ opacity: 0.7 }} />
               <div className="orb" aria-hidden="true" style={{ width: 420, height: 420, right: -140, bottom: -160 }} />
-              <div className="eyebrow" style={{ color: 'var(--red-soft)', fontSize: 12 }}>Featured</div>
+              <div className="eyebrow" style={{ fontSize: 12 }}>Featured</div>
               <h3>Ports &amp; Maritime</h3>
               <p>Get ready for the U.S. Coast Guard's maritime cybersecurity rule — assessments, cyber incident response planning and crew training for terminals and port facilities.</p>
               <Link to="/contact">Start a readiness review →</Link>
@@ -187,14 +190,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="products" className="section" style={{ paddingBottom: 0 }}>
+        <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>
+          <div className="head-row reveal">
+            <div className="head">
+              <div className="eyebrow">Our products</div>
+              <h2 className="h2">Two products. One goal: <b>resilient operations<span className="dot">.</span></b></h2>
+            </div>
+            <Link to="/products" className="text-link">All products →</Link>
+          </div>
+          <ProductCards />
+        </div>
+      </section>
+
       <section className="section">
         <div className="wrap">
           <div className="band dark reveal">
             <div className="gridbg" aria-hidden="true" />
-            <div className="orb" aria-hidden="true" style={{ width: 560, height: 560, left: -200, top: -220 }} />
+            <div className="orb" aria-hidden="true" style={{ width: 600, height: 600, left: -220, top: -260, background: 'radial-gradient(circle, rgba(255,255,255,.9) 0%, rgba(255,255,255,0) 65%)' }} />
             <div className="col">
               <div className="eyebrow">Product · Varo AI</div>
-              <h2 className="h2">The judgment layer for OT security alerts.</h2>
+              <h2 className="h2">The judgment layer for <b>OT security alerts<span className="dot">.</span></b></h2>
               <p>Varo AI sits above the OT detection platforms you already run and helps your team decide what matters, why, and what to do next.</p>
               <div className="hero-actions" style={{ paddingTop: 8 }}>
                 <Link to="/products#demo" className="btn btn-primary">Request a demo</Link>
@@ -210,7 +226,7 @@ export default function Home() {
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 52 }}>
           <div className="head reveal" style={{ maxWidth: 780 }}>
             <div className="eyebrow">Why Encyber</div>
-            <h2 className="h2">OT first. Never an IT playbook on the plant floor.</h2>
+            <h2 className="h2">Built for the <b>plant floor<span className="dot">.</span></b></h2>
           </div>
           <div className="pillars">
             <div className="pillar reveal"><h3>Safety before scans</h3><p>Passive, non-intrusive methods by default. Production keeps running while we work.</p></div>
