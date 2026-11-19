@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode, type MouseEvent } from 'react'
+import { useEffect, useState, type ReactNode, type MouseEvent, type CSSProperties } from 'react'
 
 export const routes = ['/', '/services', '/products', '/about', '/contact'] as const
 export type Route = (typeof routes)[number]
@@ -51,6 +51,7 @@ export function useRoute(): Route {
 interface LinkProps {
   to: string
   className?: string
+  style?: CSSProperties
   children: ReactNode
   onClick?: () => void
   'aria-label'?: string
