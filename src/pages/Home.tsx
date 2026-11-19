@@ -195,7 +195,7 @@ export default function Home() {
           <div className="head-row reveal">
             <div className="head">
               <div className="eyebrow">Our products</div>
-              <h2 className="h2">Two products. One goal: <b>resilient operations<span className="dot">.</span></b></h2>
+              <h2 className="h2">Two products.<br />One goal: <b>resilient operations<span className="dot">.</span></b></h2>
             </div>
             <Link to="/products" className="text-link">All products →</Link>
           </div>
