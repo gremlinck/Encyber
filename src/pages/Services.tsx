@@ -138,7 +138,7 @@ export default function Services() {
         </div>
       </section>
 
-      <CtaBand title="Tell us what you need to protect. We'll scope the right mix." action="Book a scoping call" />
+      <CtaBand title={"Tell us what you need to protect.\nWe'll scope the right mix."} action="Book a scoping call" />
     </>
   )
 }
