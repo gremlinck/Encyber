@@ -4,9 +4,9 @@ export const routes = ['/', '/services', '/products', '/about', '/contact'] as c
 export type Route = (typeof routes)[number]
 
 const titles: Record<Route, string> = {
-  '/': 'ENCYBER — OT Security Training, Assessments & Consulting',
-  '/services': 'Services — OT Security Training, Assessments & Consulting · ENCYBER',
-  '/products': 'Products — Varo AI, Decision Intelligence for OT/ICS Security · ENCYBER',
+  '/': 'ENCYBER — Cybersecurity for Critical Operations',
+  '/services': 'Services — Penetration Testing, OT/ICS Security & Training · ENCYBER',
+  '/products': 'Products — EnguardX & Varo AI · ENCYBER',
   '/about': 'About ENCYBER',
   '/contact': 'Contact ENCYBER',
 }
