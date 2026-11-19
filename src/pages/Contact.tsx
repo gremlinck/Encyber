@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { EMAIL } from '../components/Footer'
+import { EMAIL, LINKEDIN, LinkedInIcon } from '../components/Footer'
 import Orbit from '../components/Orbit'
 
 const interests = ['OT/ICS training', 'Vulnerability assessment', 'Penetration testing', 'Consulting', 'EnguardX', 'Varo AI demo', 'Partnership', 'Something else']
@@ -35,6 +35,10 @@ export default function Contact() {
             <span className="k">OFFICES</span>
             <span>Seoul, South Korea</span>
             <span>Richmond, Virginia, USA</span>
+          </div>
+          <div className="info rise d4">
+            <span className="k">FOLLOW</span>
+            <a href={LINKEDIN} target="_blank" rel="noopener" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontWeight: 500 }}><LinkedInIcon />LinkedIn</a>
           </div>
         </div>
         <div className="form rise d3" style={{ position: 'relative', zIndex: 1 }}>
