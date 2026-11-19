@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="wrap footer-bottom">
-        <span>© {new Date().getFullYear()} Encyber Co., Ltd.</span>
+        <span>© 2024–{new Date().getFullYear()} Encyber Co., Ltd.</span>
         <span>IT · OT · ICS Security</span>
       </div>
     </footer>
