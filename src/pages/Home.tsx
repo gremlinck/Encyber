@@ -236,6 +236,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="news" className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
+          <div className="head reveal">
+            <div className="eyebrow">News &amp; partnerships</div>
+            <h2 className="h2">What's <b>coming<span className="dot">.</span></b></h2>
+          </div>
+          <div className="products">
+            <Link to="/contact" className="card product reveal glow-hl" style={{ minHeight: 280 }}>
+              <div className="top"><span className="tag">PARTNERSHIP · TO BE ANNOUNCED</span><span className="led" aria-hidden="true" /></div>
+              <h3 style={{ fontSize: 28, fontWeight: 600, letterSpacing: '-0.01em', lineHeight: 1.2 }}>New strategic partnership</h3>
+              <p className="body">We're expanding our offensive-security and OT capabilities with a new global partner. Details coming soon.</p>
+              <span style={{ marginTop: 'auto', fontWeight: 600, borderBottom: '1.5px solid var(--cyan)', alignSelf: 'flex-start' }}>Get updates →</span>
+            </Link>
+            <div className="card product reveal" style={{ minHeight: 280, borderStyle: 'dashed' }}>
+              <div className="top"><span className="tag" style={{ color: '#6B7280' }}>RESEARCH · COMING SOON</span></div>
+              <h3 style={{ fontSize: 28, lineHeight: 1.2, letterSpacing: '-0.01em' }}>OT Security Research Report 2026</h3>
+              <p className="body">What security practitioners told us about OT alerts, staffing and decision-making.</p>
+              <Link to="/contact">Get notified →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CtaBand title="Find out where your OT environment is exposed — before someone else does." />
     </>
   )
