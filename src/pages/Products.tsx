@@ -24,7 +24,7 @@ export default function Products() {
         <Orbit size={640} style={{ right: -140, top: -60 }} />
         <div className="wrap hero-inner">
           <div className="eyebrow rise d1" style={{ display: 'flex', alignItems: 'center', gap: 12 }}><span className="pulse" />Products</div>
-          <h1 className="rise d2" style={{ fontSize: 'clamp(44px, 6.2vw, 76px)' }}>Built in the field. <b>Made to scale<span className="dot">.</span></b></h1>
+          <h1 className="rise d2" style={{ fontSize: 'clamp(44px, 6.2vw, 76px)' }}>Built in the field.<br /><b>Made to scale<span className="dot">.</span></b></h1>
           <p className="lead rise d3" style={{ maxWidth: 720 }}>EnguardX builds the skills to defend industrial operations. Varo AI helps those teams decide faster. Together they turn what we learn in every engagement into something your team keeps.</p>
           <div className="rise d4" style={{ width: '100%', paddingTop: 16 }}><ProductCards onPage /></div>
         </div>
