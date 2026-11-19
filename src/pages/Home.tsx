@@ -133,7 +133,7 @@ export default function Home() {
       <section className="section" style={{ paddingBottom: 56 }}>
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 52 }}>
           <div className="head-row reveal">
-            <div className="head">
+            <div className="head" style={{ maxWidth: 'none' }}>
               <div className="eyebrow">Services</div>
               <h2 className="h2">Four ways we harden <b>your operations<span className="dot">.</span></b></h2>
             </div>
@@ -169,7 +169,7 @@ export default function Home() {
 
       <section id="solutions" className="section section-alt">
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 52 }}>
-          <div className="head reveal">
+          <div className="head reveal" style={{ maxWidth: 'none' }}>
             <div className="eyebrow">Solutions</div>
             <h2 className="h2">Security shaped around <b>your industry<span className="dot">.</span></b></h2>
           </div>
