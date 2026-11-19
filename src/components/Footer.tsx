@@ -1,40 +1,36 @@
-import EncyberLogo from './EncyberLogo'
 import { Link } from '../lib/router'
+
+export const EMAIL = 'info@encyberr.com'
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="wrap">
-        <div className="footer-top">
-          <div>
-            <Link to="/" className="brand" aria-label="ENCYBER home">
-              <EncyberLogo size={26} darkBg />
-              ENCYBER
-            </Link>
-            <p className="tagline">Pioneering Cybersecurity<br />for Critical Technologies</p>
-          </div>
-          <nav className="footer-col" aria-label="Offerings">
-            <h4>Offerings</h4>
-            <Link to="/services#training">Training</Link>
-            <Link to="/services#assessments">Vulnerability assessments</Link>
-            <Link to="/services#consulting">Consulting</Link>
-            <Link to="/products">Varo AI</Link>
-          </nav>
-          <nav className="footer-col" aria-label="Company">
-            <h4>Company</h4>
-            <Link to="/about">About</Link>
-            <Link to="/solutions">Solutions</Link>
-            <Link to="/contact">Contact us</Link>
-          </nav>
-          <div className="footer-col">
-            <h4>Contact</h4>
-            <a href="mailto:demo@encyberr.com">demo@encyberr.com</a>
-            <span>Busan, Republic of Korea</span>
-          </div>
+      <div className="wrap footer-top">
+        <div className="lead-col">
+          <div className="brand">ENCYBER<span>.</span></div>
+          <p>OT/ICS security training, assessments and consulting for critical infrastructure.</p>
         </div>
-        <div className="footer-bottom">
-          <span>© 2026 Encyber Co., Ltd. · All rights reserved.</span>
+        <div>
+          <div className="k">COMPANY</div>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </div>
+        <div>
+          <div className="k">OFFER</div>
+          <Link to="/services">Services</Link>
+          <Link to="/#solutions">Solutions</Link>
+          <Link to="/products">Varo AI</Link>
+        </div>
+        <div style={{ maxWidth: 300 }}>
+          <div className="k">OFFICE</div>
+          <span style={{ lineHeight: 1.6 }}>Suite 520, 5F, MV Tower, 55 Gangnam-daero 132-gil, Gangnam-gu, Seoul</span>
+          <span>Richmond, Virginia</span>
+          <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+        </div>
+      </div>
+      <div className="wrap footer-bottom">
+        <span>© {new Date().getFullYear()} Encyber Co., Ltd.</span>
+        <span>OT / ICS Security</span>
       </div>
     </footer>
   )
