@@ -93,7 +93,7 @@ export default function About() {
         </div>
       </section>
 
-      <CtaBand title="Ready to talk? Let's look at your environment together." action="Talk to an expert" />
+      <CtaBand title={"Ready to talk?\nLet's look at your environment together."} action="Talk to an expert" />
     </>
   )
 }
