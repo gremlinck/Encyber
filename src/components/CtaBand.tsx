@@ -1,22 +1,12 @@
-import { ArrowRight } from 'lucide-react'
 import { Link } from '../lib/router'
 
-interface CtaBandProps {
-  heading: string
-  body: string
-  label?: string
-  to?: string
-}
-
-export default function CtaBand({ heading, body, label = 'Contact us', to = '/contact' }: CtaBandProps) {
+export default function CtaBand({ title, action = 'Book an assessment call' }: { title: string; action?: string }) {
   return (
     <section className="cta">
-      <div className="wrap cta-inner">
-        <div>
-          <h2>{heading}</h2>
-          <p>{body}</p>
-        </div>
-        <Link to={to} className="btn btn-primary">{label} <ArrowRight size={16} /></Link>
+      <div className="gridbg" aria-hidden="true" />
+      <div className="wrap cta-inner reveal">
+        <h2>{title}</h2>
+        <Link to="/contact" className="btn btn-light">{action}</Link>
       </div>
     </section>
   )
