@@ -50,7 +50,7 @@ export default function About() {
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
           <div className="head reveal">
             <div className="eyebrow">What we believe</div>
-            <h2 className="h2">Four principles <b>behind every engagement<span className="dot">.</span></b></h2>
+            <h2 className="h2">Four principles<br /><b>behind every engagement<span className="dot">.</span></b></h2>
           </div>
           <div className="steps">
             {principles.map((p, i) => (
