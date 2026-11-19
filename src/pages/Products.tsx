@@ -43,6 +43,10 @@ export default function Products() {
               <a href="#how" className="btn btn-ghost">How it works</a>
             </div>
           </div>
+          <div className="head reveal" style={{ maxWidth: 'none', paddingTop: 24 }}>
+            <div className="eyebrow">The problem</div>
+            <h2 className="h2" style={{ fontSize: 'clamp(28px, 3.4vw, 48px)' }}>Detection isn't the bottleneck anymore.<br /><b>Judgment is<span className="dot">.</span></b></h2>
+          </div>
           <div className="pillars">
             <div className="pillar ink reveal"><h3>Alert volume</h3><p>OT monitoring surfaces more events than small teams can review.</p></div>
             <div className="pillar ink reveal"><h3>Missing context</h3><p>An alert rarely says what the asset does, or what happens if it stops.</p></div>
