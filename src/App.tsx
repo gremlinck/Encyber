@@ -14,7 +14,7 @@ export default function App() {
   useReveal(route)
   return (
     <div className="app">
-      {route === '/' && <Announcement />}
+      <Announcement />
       <Nav route={route} />
       <main>
         {route === '/' && <Home />}
