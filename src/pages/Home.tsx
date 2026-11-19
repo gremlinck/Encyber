@@ -101,7 +101,7 @@ export default function Home() {
         <Orbit size={760} style={{ right: -180, top: 40 }} />
         <div className="wrap hero-inner">
           <div className="hero-copy">
-            <div className="eyebrow rise d1"><span className="pulse" />OT / ICS SECURITY SERVICES</div>
+            <div className="eyebrow rise d1"><span className="pulse" />CYBERSECURITY FOR CRITICAL OPERATIONS</div>
             <h1>
               <span className="rise d2">Secure the systems</span>{' '}
               <span className="rise d3">that keep operations</span>{' '}
