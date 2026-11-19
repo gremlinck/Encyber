@@ -7,7 +7,7 @@ export default function CtaBand({ title, action = 'Book an assessment call' }: {
       <div className="gridbg" aria-hidden="true" />
       <Orbit size={420} style={{ right: '6%', top: '50%', marginTop: -210 }} />
       <div className="wrap cta-inner reveal">
-        <h2>{title}</h2>
+        <h2 style={{ whiteSpace: 'pre-line' }}>{title}</h2>
         <Link to="/contact" className="btn btn-light">{action}</Link>
       </div>
     </section>
