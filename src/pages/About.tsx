@@ -1,95 +1,99 @@
-import { useEffect, useState, type FormEvent } from 'react'
-import { EMAIL } from '../components/Footer'
+import Orbit from '../components/Orbit'
+import CtaBand from '../components/CtaBand'
 
-const interests = ['OT/ICS training', 'Vulnerability assessment', 'Offensive security', 'Consulting', 'Varo AI demo', 'Partnership', 'Something else']
+const whatWeDo = [
+  { k: 'Services', t: 'Assess, test and harden', d: 'OT assessments, penetration testing, attack simulation and compliance readiness — scoped for safety-critical environments.' },
+  { k: 'Products', t: 'EnguardX and Varo AI', d: 'EnguardX builds hands-on OT security skills. Varo AI turns OT alerts into clear decisions.' },
+  { k: 'Partners', t: 'Global depth, one lead', d: 'We bring in established OT training and offensive-security teams, with Encyber as your single point of contact.' },
+]
 
-export default function About({ focusContact = false }: { focusContact?: boolean }) {
-  const [d, setD] = useState({ name: '', email: '', company: '', interest: interests[0], message: '' })
-  const [sent, setSent] = useState(false)
-  const set = (k: keyof typeof d) => (e: { target: { value: string } }) => setD({ ...d, [k]: e.target.value })
+const principles = [
+  { t: 'Safety before scans', d: 'Production keeps running. We use passive, non-intrusive methods first.' },
+  { t: 'Evidence over fear', d: 'Findings come with proof and a priority, not a list of worst cases.' },
+  { t: 'Skills that stay', d: 'We train your people so capability remains after we leave.' },
+  { t: 'Decisions, not noise', d: 'Fewer, clearer actions beat more alerts and dashboards.' },
+]
 
-  useEffect(() => {
-    if (focusContact) requestAnimationFrame(() => document.getElementById('contact')?.scrollIntoView())
-  }, [focusContact])
-
-  // The site is static, so the form hands the message to the visitor's email app.
-  const submit = (e: FormEvent) => {
-    e.preventDefault()
-    const body = [`Name: ${d.name}`, `Email: ${d.email}`, `Organization: ${d.company || '-'}`, `Interested in: ${d.interest}`, '', d.message].join('\n')
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(`${d.interest} — ${d.company || d.name}`)}&body=${encodeURIComponent(body)}`
-    setSent(true)
-  }
-
+export default function About() {
   return (
     <>
-      <section className="hero dark">
+      <section className="hero dark page-hero">
         <div className="gridbg" aria-hidden="true" />
-        <div className="orb" aria-hidden="true" style={{ width: 680, height: 680, right: -160, top: -220 }} />
-        <div id="about" className="wrap hero-inner">
-          <div className="hero-copy">
-            <div className="eyebrow rise d1">About Encyber</div>
-            <h1 className="rise d2" style={{ fontSize: 'clamp(40px, 5.2vw, 64px)' }}>We protect the operations society depends on.</h1>
-            <p className="lead rise d3">Encyber is an OT/ICS security company. We help operators of ports, utilities, factories and critical facilities understand their risk, build capable teams and make better security decisions — through hands-on services today and Varo AI, our product for OT alert judgment.</p>
-          </div>
-          <dl className="facts rise d4">
-            <div><dt>FOUNDED</dt><dd>2024, Seoul</dd></div>
-            <div><dt>FOCUS MARKET</dt><dd>United States</dd></div>
-            <div><dt>SPECIALTY</dt><dd>OT / ICS security</dd></div>
-            <div><dt>PRODUCT</dt><dd>Varo AI</dd></div>
-          </dl>
+        <div className="orb" aria-hidden="true" style={{ width: 900, height: 900, right: -260, top: -380 }} />
+        <Orbit size={600} style={{ right: -160, top: -40 }} />
+        <div className="wrap hero-inner">
+          <div className="eyebrow rise d1" style={{ display: 'flex', alignItems: 'center', gap: 12 }}><span className="pulse" />About Encyber</div>
+          <h1 className="rise d2">We protect the operations <b>society depends on<span className="dot">.</span></b></h1>
+          <p className="lead rise d3" style={{ maxWidth: 760 }}>Encyber is an OT/ICS security company. We help operators of ports, utilities, factories and critical facilities see their risk clearly, build teams that can respond, and make faster security decisions.</p>
         </div>
       </section>
 
-      <section className="section-alt">
-        <div className="wrap pillars" style={{ paddingTop: 72, paddingBottom: 72 }}>
-          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}><div className="eyebrow">Mission</div><p style={{ fontSize: 18, lineHeight: 1.6 }}>Make industrial operations resilient against cyber threats without slowing them down.</p></div>
-          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}><div className="eyebrow">Approach</div><p style={{ fontSize: 18, lineHeight: 1.6 }}>Safety first, evidence over fear, and practical steps a plant team can actually take.</p></div>
-          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}><div className="eyebrow">Partners</div><p style={{ fontSize: 18, lineHeight: 1.6 }}>We deliver with established global OT training and offensive-security partners.</p></div>
-        </div>
-      </section>
-
-      <section id="contact" className="section">
-        <div className="wrap split">
-          <div className="col reveal">
-            <div className="eyebrow">Contact us</div>
-            <h2 className="h2">Let's talk about your environment.</h2>
-            <p className="lead">Tell us what you're working on. We reply within one business day.</p>
-            <div className="info" style={{ paddingTop: 8 }}>
-              <span className="k">EMAIL</span>
-              <a href={`mailto:${EMAIL}`} style={{ fontSize: 18, fontWeight: 500 }}>{EMAIL}</a>
-            </div>
-            <div className="info">
-              <span className="k">OFFICES</span>
-              <span style={{ lineHeight: 1.6 }}>Seoul, South Korea</span>
-              <span>Richmond, Virginia, USA</span>
-            </div>
+      <section className="section" style={{ paddingBottom: 56 }}>
+        <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
+          <div className="head reveal">
+            <div className="eyebrow">What we do</div>
+            <h2 className="h2">Services, products and partners — <b>in one place<span className="dot">.</span></b></h2>
           </div>
-          <div className="form reveal">
-            {sent ? (
-              <div className="form-done">
-                <h3>Your email app should now be open.</h3>
-                <p className="body">Press send there to reach us. If nothing opened, write to <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</p>
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+            {whatWeDo.map(w => (
+              <div key={w.k} className="card reveal" style={{ padding: '32px 28px', gap: 12 }}>
+                <div className="eyebrow" style={{ fontSize: 12 }}>{w.k}</div>
+                <h3 style={{ fontSize: 24 }}>{w.t}</h3>
+                <p className="body">{w.d}</p>
               </div>
-            ) : (
-              <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-                <div className="form-row">
-                  <label className="field">Full name<input required autoComplete="name" value={d.name} onChange={set('name')} /></label>
-                  <label className="field">Work email<input type="email" required autoComplete="email" value={d.email} onChange={set('email')} /></label>
-                </div>
-                <div className="form-row">
-                  <label className="field">Company<input autoComplete="organization" value={d.company} onChange={set('company')} /></label>
-                  <label className="field">I'm interested in
-                    <select value={d.interest} onChange={set('interest')}>{interests.map(i => <option key={i}>{i}</option>)}</select>
-                  </label>
-                </div>
-                <label className="field">Message<textarea rows={5} required value={d.message} onChange={set('message')} /></label>
-                <button type="submit" className="btn btn-primary">Send message</button>
-                <p className="form-note">Sending opens your email app with the message ready to go.</p>
-              </form>
-            )}
+            ))}
           </div>
         </div>
       </section>
+
+      <section className="section" style={{ paddingTop: 56 }}>
+        <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
+          <div className="head reveal">
+            <div className="eyebrow">What we believe</div>
+            <h2 className="h2">Four principles <b>behind every engagement<span className="dot">.</span></b></h2>
+          </div>
+          <div className="steps">
+            {principles.map((p, i) => (
+              <div key={p.t} className="principle reveal">
+                <span className="n">0{i + 1}</span>
+                <h3>{p.t}</h3>
+                <p>{p.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #F3F7FA 0%, #E8F1F5 100%)', borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)' }}>
+        <div className="gridbg" aria-hidden="true" />
+        <div className="wrap split" style={{ position: 'relative', alignItems: 'center' }}>
+          <div className="col reveal">
+            <div className="eyebrow">Where we focus</div>
+            <h2 className="h2">U.S. critical infrastructure, <b>starting with ports<span className="dot">.</span></b></h2>
+            <p className="lead">New maritime cyber rules make port facilities our first priority, alongside energy, manufacturing, healthcare facilities and the AI data centers now joining the grid.</p>
+          </div>
+          <div className="col reveal" style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 12 }}>
+            <span className="chip lead">Ports &amp; Maritime</span>
+            <span className="chip">Energy &amp; Utilities</span>
+            <span className="chip">Manufacturing</span>
+            <span className="chip">Healthcare Facilities</span>
+            <span className="chip">AI Data Centers</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
+            <div className="eyebrow">Offices</div>
+            <h2 className="h2" style={{ fontSize: 36 }}>Two hubs, <b>one team<span className="dot">.</span></b></h2>
+          </div>
+          <div className="card reveal" style={{ padding: 28, gap: 6 }}><div className="eyebrow" style={{ fontSize: 12 }}>USA</div><span style={{ fontSize: 24, fontWeight: 600 }}>Richmond, Virginia</span></div>
+          <div className="card reveal" style={{ padding: 28, gap: 6 }}><div className="eyebrow" style={{ fontSize: 12 }}>South Korea</div><span style={{ fontSize: 24, fontWeight: 600 }}>Seoul</span></div>
+        </div>
+      </section>
+
+      <CtaBand title="Ready to talk? Let's look at your environment together." action="Talk to an expert" />
     </>
   )
 }
