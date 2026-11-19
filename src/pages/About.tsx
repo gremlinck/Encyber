@@ -60,7 +60,7 @@ export default function About({ focusContact = false }: { focusContact?: boolean
             </div>
             <div className="info">
               <span className="k">OFFICES</span>
-              <span style={{ lineHeight: 1.6 }}>Suite 520, 5F, MV Tower, 55 Gangnam-daero 132-gil, Gangnam-gu, Seoul</span>
+              <span style={{ lineHeight: 1.6 }}>Seoul, South Korea</span>
               <span>Richmond, Virginia</span>
             </div>
           </div>
