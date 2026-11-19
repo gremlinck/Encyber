@@ -102,10 +102,10 @@ export default function Home() {
         <div className="wrap hero-inner">
           <div className="hero-copy">
             <div className="eyebrow rise d1"><span className="pulse" />CYBERSECURITY FOR CRITICAL OPERATIONS</div>
-            <h1>
-              <span className="rise d2">Secure the systems</span>{' '}
-              <span className="rise d3">that keep operations</span>{' '}
-              <span className="rise d4 accent">running<span className="dot">.</span></span>
+            <h1 aria-label="Secure the systems that keep operations running.">
+              <span className="rise d2" aria-hidden="true">Secure the systems{'\u00A0'}</span>
+              <span className="rise d3" aria-hidden="true">that keep operations{'\u00A0'}</span>
+              <span className="rise d4 accent" aria-hidden="true">running<span className="dot">.</span></span>
             </h1>
             <p className="lead rise d5" style={{ maxWidth: 560 }}>
               Training, assessments and consulting for ports, utilities, manufacturers and critical infrastructure — delivered by people who know the plant floor, not just the network.
