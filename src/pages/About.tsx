@@ -2,9 +2,9 @@ import Orbit from '../components/Orbit'
 import CtaBand from '../components/CtaBand'
 
 const whatWeDo = [
-  { k: 'Services', t: 'Assess, test and harden', d: 'OT assessments, penetration testing, attack simulation and compliance readiness — scoped for safety-critical environments.' },
+  { k: 'Services', t: 'Assess, test and harden', d: 'Penetration testing, red teaming, application security, OT assessments and compliance readiness — across IT and OT.' },
   { k: 'Products', t: 'EnguardX and Varo AI', d: 'EnguardX builds hands-on OT security skills. Varo AI turns OT alerts into clear decisions.' },
-  { k: 'Partners', t: 'Global depth, one lead', d: 'We bring in established OT training and offensive-security teams, with Encyber as your single point of contact.' },
+  { k: 'Partners', t: 'Global depth, one lead', d: 'We bring in established global training and offensive-security teams, with Encyber as your single point of contact.' },
 ]
 
 const principles = [
@@ -24,7 +24,7 @@ export default function About() {
         <div className="wrap hero-inner">
           <div className="eyebrow rise d1" style={{ display: 'flex', alignItems: 'center', gap: 12 }}><span className="pulse" />About Encyber</div>
           <h1 className="rise d2">We protect the operations <b>society depends on<span className="dot">.</span></b></h1>
-          <p className="lead rise d3" style={{ maxWidth: 760 }}>Encyber is an OT/ICS security company. We help operators of ports, utilities, factories and critical facilities see their risk clearly, build teams that can respond, and make faster security decisions.</p>
+          <p className="lead rise d3" style={{ maxWidth: 760 }}>Encyber secures industrial and enterprise environments, with deep OT/ICS expertise. We help organisations — from ports and utilities to factories and corporate IT — see their risk clearly, build teams that can respond, and make faster security decisions.</p>
         </div>
       </section>
 

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="wrap footer-top">
         <div className="lead-col">
           <div className="brand">ENCYBER<span>.</span></div>
-          <p>OT/ICS security training, assessments and consulting for critical infrastructure.</p>
+          <p>Cybersecurity for industrial and enterprise environments — services, training and AI.</p>
         </div>
         <div>
           <div className="k">COMPANY</div>
@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
       <div className="wrap footer-bottom">
         <span>© {new Date().getFullYear()} Encyber Co., Ltd.</span>
-        <span>OT / ICS Security</span>
+        <span>IT · OT · ICS Security</span>
       </div>
     </footer>
   )
