@@ -325,6 +325,18 @@ img, svg { display: block; }
 
 @media (max-width: 640px) { .orbit { display: none; } }
 
+/* ── Korean page ── */
+.ko { font-family: 'Outfit', 'Noto Sans KR', system-ui, sans-serif; word-break: keep-all; }
+.ko .ko-h2 { line-height: 1.25; letter-spacing: -0.02em; }
+.ko .ko-h2 b { font-weight: 700; }
+.ko .hero h1 b { font-weight: 700; }
+.ko-row { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 26px 28px; }
+.ko-row-head { flex: 0 0 260px; display: flex; flex-direction: column; gap: 6px; }
+.ko-chips { flex: 1 1 420px; min-width: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ko-chips .chip { font-size: 15px; padding: 10px 16px; background: rgba(255,255,255,.75); }
+.lang-pill { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; border: 1px solid rgba(14,30,50,.2); border-radius: 999px; padding: 10px 14px; background: rgba(255,255,255,.6); min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 880px) { .ko .nav-links { display: none; } .ko-row-head { flex-basis: 100%; } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
