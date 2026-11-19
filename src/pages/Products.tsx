@@ -35,7 +35,7 @@ export default function Products() {
           <div className="head-row">
             <div className="head reveal" style={{ maxWidth: 760 }}>
               <div className="eyebrow">Varo AI · Decision intelligence</div>
-              <h2 className="h2" style={{ fontSize: 'clamp(38px, 5vw, 64px)' }}>Fewer alerts. <b>Better decisions<span className="dot">.</span></b></h2>
+              <h2 className="h2" style={{ fontSize: 'clamp(38px, 5vw, 64px)' }}>Fewer alerts.<br /><b>Better decisions<span className="dot">.</span></b></h2>
               <p className="lead">Varo AI is an AI-powered judgment layer that sits above your existing OT detection platform. It adds plant context to every alert so your team knows what matters and what to do next.</p>
             </div>
             <div className="hero-actions reveal">
